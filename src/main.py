@@ -12,7 +12,7 @@ log = getLogger("main")
 
 def main():
     log.info(
-        "%s running on %s at port %s with end-point set to %s",
+        "%s running on %s at port %s",
         getenv("MODULE_NAME"),
         getenv("INGRESS_HOST"),
         getenv("INGRESS_PORT"),
