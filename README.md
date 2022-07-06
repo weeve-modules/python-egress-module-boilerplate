@@ -3,7 +3,7 @@
 |              |                                                                  |
 | ------------ | ---------------------------------------------------------------- |
 | name         | Python Output Module Boilerplate                             |
-| version      | v2.0.0                                                           |
+| version      | v1.0.0                                                           |
 | GitHub       | [python-output-module-boilerplate](https://github.com/weeve-modules/python-egress-module-boilerplate) |
 | authors      | Jakub Grzelak, Nithin Saai                                       |
 
