@@ -28,6 +28,7 @@ envs:                                   # Array of environment variables that wi
     description: Module setting 2
     value: ''
     type: 'number'
+    options: []
     dependencies:
       - key: ENVIRONMENT_1              # key of the dependency
         value: option_B                 # value of the dependency
