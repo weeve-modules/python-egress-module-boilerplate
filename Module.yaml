@@ -11,7 +11,7 @@ image:
   name: 'weevenetwork/module-boilerplate'     # Image name from the docker registry.
   tag: 'latest'                               # Image tag from the docker registry.
   homepage: 'https://hub.docker.com/weevenetwork/module-boilerplate'      # Image homepage from the docker registry.
-repository: 'https://github.com/weeve-modules/python-egress-module-boilerplate'     # Repository URL to source code.
+repository: 'https://github.com/weeve-modules/python-output-module-boilerplate'     # Repository URL to source code.
 envs:                                   # Array of environment variables that will be used to configure the module. Also used to show related fields on the UI.
   - name: Setting 1                   # name of the field to be displayed on the UI.
     key: ENVIRONMENT_1                # key to set in the environment variables.
@@ -22,26 +22,28 @@ envs:                                   # Array of environment variables that wi
       - option_A
       - option_B
       - option_C
-    dependencies:                     # List of dependencies for the field. This field is only displayed if all the dependencies are met. If
-      - key:                          # key of the dependency
-        value:                        # value of the dependency
+    dependencies: []                     # List of dependencies for the field. This field is only displayed if all the dependencies are met. If
   - name: Setting 2
     key: ENVIRONMENT_2
     description: Module setting 2
     value: ''
     type: 'number'
     dependencies:
-      - key: ENVIRONMENT_1
-        value: option_B
+      - key: ENVIRONMENT_1              # key of the dependency
+        value: option_B                 # value of the dependency
 ports:                                  # Array of ports that will be exposed by the module.
   - container: 8080                     # Port number from the container.
     host: 8080                          # Port number to map on the host.
+envPorts: []
 mounts:
   - container: '/data'                  # Mount path from the container.
     host: '/data'                       # Mount path to map on the host.
+envMounts: []
+devices: []
+envDevices: []
 tags:                                   # Array of tags.
   - 'Python'
   - 'Output'
   - 'Boilerplate'
-  - 'Boilerplate 1.0.0'
+  - '1.0.0'
 icon: 'https://some.url/to/icon.png'    # Icon URL that will be displayed in the UI.
